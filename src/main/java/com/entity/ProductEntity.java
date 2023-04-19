@@ -8,13 +8,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "product")
-public class ProductEntity
-{
+public class ProductEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer productId;
-	private String productName;
+	private String name;
 	private Integer qty;
 	private Float price;
 
@@ -26,12 +25,12 @@ public class ProductEntity
 		this.productId = productId;
 	}
 
-	public String getProductName() {
-		return productName;
+	public String getName() {
+		return name;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Integer getQty() {
@@ -48,12 +47,6 @@ public class ProductEntity
 
 	public void setPrice(Float price) {
 		this.price = price;
-	}
-
-	@Override
-	public String toString() {
-		return "ProductEntity [productId=" + productId + ", productName=" + productName + ", qty=" + qty + ", price="
-				+ price + "]";
 	}
 
 }
