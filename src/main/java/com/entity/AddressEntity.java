@@ -14,7 +14,7 @@ public class AddressEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer addressId;
-	private String address;
+	private String addressName;
 	private String city;
 	private Integer pincode;
 
@@ -29,12 +29,12 @@ public class AddressEntity {
 		this.addressId = addressId;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddressName() {
+		return addressName;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddressName(String addressName) {
+		this.addressName = addressName;
 	}
 
 	public String getCity() {
@@ -60,5 +60,7 @@ public class AddressEntity {
 	public void setCustomer(CustomerEntity customer) {
 		this.customer = customer;
 	}
+
+	
 
 }
